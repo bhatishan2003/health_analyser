@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button class="mode-toggle" onclick="toggleMode()">🌙 Dark Mode</button>
+
+  <div class="container">
+    <h1>Health Analyzer</h1>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" placeholder="e.g., 25" min="1" max="120" />
+
+    <label for="gender">Gender:</label>
+    <select id="gender">
+      <option value="">Select</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+
+    <label for="activity">Activity Level:</label>
+    <select id="activity">
+      <option value="">Select</option>
+      <option value="low">Low (Sedentary)</option>
+      <option value="moderate">Moderate (1-3 days/week)</option>
+      <option value="high">High (4+ days/week)</option>
+    </select>
+
+    <label for="height">Height (in cm):</label>
+    <input type="number" id="height" placeholder="e.g., 170" min="50" max="300" />
+
+    <label for="weight">Weight (in kg):</label>
+    <input type="number" id="weight" placeholder="e.g., 65" min="10" max="300" />
+
+    <button onclick="analyzeHealth()">Analyze</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
